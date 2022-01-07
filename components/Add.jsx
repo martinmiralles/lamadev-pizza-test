@@ -45,7 +45,7 @@ const Add = ({ setClose }) => {
       };
 
       await axios.post(
-        "https://asdfasdfasdf-theta.vercel.app/pages/api/products",
+        "https://asdfasdfasdf-theta.vercel.app/api/products",
         newProduct
       );
       setClose(true);
