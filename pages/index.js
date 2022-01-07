@@ -8,6 +8,8 @@ import Featured from "../components/Featured";
 import PizzaList from "../components/PizzaList";
 import styles from "../styles/Home.module.css";
 
+// TRY TO REMOVE TOKENS FOR TESTING
+
 export default function Home({ pizzaList, admin }) {
   const [close, setClose] = useState(true);
   return (
@@ -33,9 +35,7 @@ export const getServerSideProps = async (ctx) => {
     admin = true;
   }
 
-  const res = await axios.get(
-    "https://asdfasdfasdf-theta.vercel.app/api/products"
-  );
+  const res = await axios.get("https://localhost:3000/api/products");
   return {
     props: {
       pizzaList: res.data,
