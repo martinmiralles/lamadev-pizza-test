@@ -44,7 +44,10 @@ const Add = ({ setClose }) => {
         img: url,
       };
 
-      await axios.post("http://localhost:3000/pages/api/products", newProduct);
+      await axios.post(
+        "https://asdfasdfasdf-theta.vercel.app/pages/api/products",
+        newProduct
+      );
       setClose(true);
     } catch (err) {
       console.log(err);
