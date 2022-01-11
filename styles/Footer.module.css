@@ -12,6 +12,7 @@
 
 .item:last-child {
   flex: 2;
+  border-left: 3px solid #fff;
   padding: 50px;
   justify-content: space-between;
 }

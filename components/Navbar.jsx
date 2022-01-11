@@ -13,20 +13,24 @@ const Navbar = () => {
         </div>
         <div className={styles.texts}>
           <div className={styles.text}>ORDER NOW!</div>
-          <div className={styles.text}>012 345 678</div>
+          <div className={styles.text}>+1 (234) 456 7890</div>
         </div>
       </div>
       <div className={styles.item}>
         <ul className={styles.list}>
-          <Link href="/" passHref>
-            <li className={styles.listItem}>Homepage</li>
+          {/* <li className={styles.listItem}>Homepage</li> */}
+          <Link href="/#pizzalist">
+            <li className={styles.listItem}>Menu</li>
           </Link>
-          <li className={styles.listItem}>Products</li>
-          <li className={styles.listItem}>Menu</li>
-          <Image src="/img/logo.png" alt="" width="160px" height="69px" />
-          <li className={styles.listItem}>Events</li>
-          <li className={styles.listItem}>Blog</li>
-          <li className={styles.listItem}>Contact</li>
+          <Link href="/">
+            <li width="160px" height="69px" className={styles.logo}>
+              Mar's
+            </li>
+          </Link>
+
+          <Link href="/#footer">
+            <li className={styles.listItem}>Contact</li>
+          </Link>
         </ul>
       </div>
       <Link href="/cart" passHref>

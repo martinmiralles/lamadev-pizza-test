@@ -3,12 +3,12 @@ import PizzaCard from "./PizzaCard";
 
 const PizzaList = ({ pizzaList }) => {
   return (
-    <div className={styles.container}>
-      <h1 className={styles.title}>THE BEST PIZZA IN TOWN</h1>
+    <div className={styles.container} id="pizzalist">
+      <h1 className={styles.title}>Perfect has 7 letters. So does Pizzzza.</h1>
       <p className={styles.desc}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut blandit arcu
-        in pretium molestie. Interdum et malesuada fames acme. Lorem ipsum dolor
-        sit amet, consectetur adipiscing elit.
+        Here at <b>Mar's</b>, we aim to serve great pizza from our family to
+        yours. So whether it's dining in one of our locations, or in the comfort
+        of your home, we got the pizzas for you!
       </p>
       <div className={styles.wrapper}>
         {pizzaList.map((pizza) => (

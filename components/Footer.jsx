@@ -3,18 +3,18 @@ import styles from "../styles/Footer.module.css";
 
 const Footer = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="footer">
       <div className={styles.item}>
         <Image src="/img/bg.png" objectFit="cover" layout="fill" alt="" />
       </div>
       <div className={styles.item}>
         <div className={styles.card}>
           <h2 className={styles.motto}>
-            OH YES, WE DID.THE LAMA PIZZA, WELL BAKED SLICE OF PIZZA.
+            YOU DESERVE A BREAK. WE'LL HANDLE DINNER.
           </h2>
         </div>
         <div className={styles.card}>
-          <h1 className={styles.title}>FIND OUR RESTAURANTS</h1>
+          <h1 className={styles.title}>OUR LOCATIONS</h1>
           <p className={styles.text}>
             1654 R. Don Road #304.
             <br /> NewYork, 85022
@@ -37,7 +37,7 @@ const Footer = () => {
           </p>
         </div>
         <div className={styles.card}>
-          <h1 className={styles.title}>WORKING HOURS</h1>
+          <h1 className={styles.title}>OUR HOURS</h1>
           <p className={styles.text}>
             MONDAY UNTIL FRIDAY
             <br /> 9:00 – 22:00

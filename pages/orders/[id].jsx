@@ -4,6 +4,7 @@ import axios from "axios";
 
 const Order = ({ order }) => {
   const status = order.status;
+  // Between 0 and 3
 
   const statusClass = (index) => {
     if (index - status < 1) return styles.done;

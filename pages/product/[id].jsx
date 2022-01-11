@@ -37,17 +37,16 @@ const Product = ({ pizza }) => {
   const handleClick = () => {
     dispatch(addProduct({ ...pizza, extras, price, quantity }));
   };
-
   return (
     <div className={styles.container}>
       <div className={styles.left}>
         <div className={styles.imgContainer}>
-          <Image src={pizza.img} objectFit="contain" layout="fill" alt="" />
+          <Image src={pizza.img} objectFit="cover" layout="fill" alt="" />
         </div>
       </div>
       <div className={styles.right}>
         <h1 className={styles.title}>{pizza.title}</h1>
-        <span className={styles.price}>${price}</span>
+        <span className={styles.price}>${price.toFixed(2)}</span>
         <p className={styles.desc}>{pizza.desc}</p>
         <h3 className={styles.choose}>Choose the size</h3>
         <div className={styles.sizes}>
@@ -64,7 +63,7 @@ const Product = ({ pizza }) => {
             <span className={styles.number}>Large</span>
           </div>
         </div>
-        <h3 className={styles.choose}>Choose additional ingredients</h3>
+        <h3 className={styles.choose}>Choose additional options</h3>
         <div className={styles.ingredients}>
           {pizza.extraOptions.map((option) => (
             <div className={styles.option} key={option._id}>
@@ -75,7 +74,9 @@ const Product = ({ pizza }) => {
                 className={styles.checkbox}
                 onChange={(e) => handleChange(e, option)}
               />
-              <label htmlFor="double">{option.text}</label>
+              <label htmlFor="double">
+                {option.text} {`($${option.price})`}
+              </label>
             </div>
           ))}
         </div>

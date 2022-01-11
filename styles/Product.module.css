@@ -20,13 +20,17 @@
   width: 80%;
   height: 80%;
   position: relative;
+  border: 5px solid green;
+  border-radius: 5%;
+  overflow: hidden;
 }
 
 .price {
   color: #d1411e;
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 500;
   border-bottom: 1px solid #d1411e;
+  border-top: 1px solid #d1411e;
 }
 
 .sizes {
@@ -71,7 +75,7 @@
 .option {
   display: flex;
   align-items: center;
-  margin-right: 10px;
+  margin-right: 20px;
   font-size: 14px;
   font-weight: 500;
 }
@@ -79,21 +83,30 @@
 .checkbox {
   width: 20px;
   height: 20px;
+  margin-right: 10px;
+}
+
+.add {
+  display: flex;
 }
 
 .quantity {
   width: 50px;
-  height: 30px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding: 0px 5px;
 }
 
 .button {
-  height: 30px;
-  margin-left: 10px;
   background-color: #d1411e;
   color: white;
   border: none;
   font-weight: 500;
   cursor: pointer;
+  padding: 10px 40px;
+  font-weight: 700;
+  border-radius: 5px;
 }
 
 @media screen and (max-width: 480px) {
@@ -132,9 +145,8 @@
     height: 25px;
   }
 
-  .quantity,
-  .button {
+  .quantity {
     height: 50px;
-    padding: 10px 20px;
+    padding: 10px 10px;
   }
 }
