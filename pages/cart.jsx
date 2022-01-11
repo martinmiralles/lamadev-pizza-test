@@ -25,20 +25,23 @@ const Cart = () => {
 
   useEffect(() => {
     // console.log("test");
-    if (open) {
+    if (cash) {
       document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
     }
   });
 
   const createOrder = async (data) => {
     try {
       const res = await axios.post(
-        "https://asdfasdfasdf-theta.vercel.app/api/orders",
+        // "https://asdfasdfasdf-theta.vercel.app/api/orders",
+        "http://localhost:3000/api/orders",
         data
       );
       if (res.status === 201) {
-        document.body.style.overflow = "revert";
         dispatch(reset());
+        setCash(false);
         router.push(`/orders/${res.data._id}`);
       }
     } catch (err) {
