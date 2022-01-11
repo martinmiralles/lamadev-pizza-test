@@ -37,6 +37,7 @@ const Cart = () => {
         data
       );
       if (res.status === 201) {
+        document.body.style.overflow = "revert";
         dispatch(reset());
         router.push(`/orders/${res.data._id}`);
       }
