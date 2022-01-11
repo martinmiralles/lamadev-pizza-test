@@ -28,7 +28,7 @@ const Cart = () => {
     if (open) {
       document.body.style.overflow = "hidden";
     }
-  });
+  }, []);
 
   const createOrder = async (data) => {
     try {
