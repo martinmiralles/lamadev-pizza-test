@@ -35,8 +35,8 @@ const Cart = () => {
   const createOrder = async (data) => {
     try {
       const res = await axios.post(
-        // "https://asdfasdfasdf-theta.vercel.app/api/orders",
-        "http://localhost:3000/api/orders",
+        "https://mar-pizza.vercel.app/api/orders",
+        // "http://localhost:3000/api/orders",
         data
       );
       if (res.status === 201) {
